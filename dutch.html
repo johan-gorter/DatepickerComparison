@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Datum controls</title>
+
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+
+  <script src="jquery-1.10.2.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script src="bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js"></script>
+  <script src="fastdate.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      $('#tw').datepicker({
+        format: 'dd-mm-yyyy',
+        language: 'nl',
+        autoclose: true
+      });
+
+      window.fastdate($("#fastdate"));
+    });
+  </script>
+</head>
+<body>
+  <h1>Vergelijking van verschillende datum controls</h1>
+  <form>
+    
+    <h3>1. HTML5</h3>
+    <p>
+      Dit is de huidige/toekomstige standaard. Elke browser heeft deze verschillend geimplementeerd. Dit is waarschijnlijk de beste keuze voor tablets en smartphones.
+    </p>
+    <p>
+      <input type="date" />
+    </p>
+    
+    <h3>2. Eigengemaakte datepicker</h3>
+    <p>
+      Deze datepicker is gemaakt om snel en efficient datums met een toetsenbord in te voeren. Hiermee is het mogelijk met slechts 6 toetsaanslagen een datum in te voeren.
+    </p>
+    <p>
+      <input type="text" id="fastdate" />
+    </p>
+
+    <h3>3. Twitter bootstrap (onofficiele) datepicker </h3>
+    <p>
+      Huidige (2013) defacto standaard.
+      <a href="http://eternicode.github.io/bootstrap-datepicker/">Alle mogelijkheden</a>
+    </p>
+    <p>
+      <input type="text" id="tw" />
+    </p>
+    
+    <h3>4. Kendo-UI</h3>
+    <p>
+      Professionele datepicker, kan ook een reeks met alleen 6 of 8 cijfers omzetten naar een datum.
+    </p>
+    <iframe src="kendoui-nl.html" frameborder="0" style="width:500px;height:290px;"></iframe>
+
+    <h3>5. JQuery-UI</h3>
+    <p>
+      Vorige defacto standaard.
+    </p>
+    <iframe src="jqueryui/localization.html" frameborder="0" style="width:500px;height:350px;"></iframe>
+
+  </form>
+</body>
+</html>
